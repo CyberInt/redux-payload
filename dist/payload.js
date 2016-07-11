@@ -68,10 +68,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	  return value;
 	};
 
-	var nullReducer = function nullReducer(state) {
-	  return typeof state === 'undefined' ? null : state;
-	};
-
 	/**
 	 * Creates a reducer wrapper which return the payload of the action for the
 	 * given action type.
@@ -83,7 +79,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var payload = function payload(actionType) {
 	  var mapResult = arguments.length <= 1 || arguments[1] === undefined ? identity : arguments[1];
 	  return function () {
-	    var reducer = arguments.length <= 0 || arguments[0] === undefined ? nullReducer : arguments[0];
+	    var reducer = arguments.length <= 0 || arguments[0] === undefined ? _reduxReuse.nullReducer : arguments[0];
 	    return (0, _reduxReuse.extendReducer)(reducer, _defineProperty({}, actionType, function (_) {
 	      var _ref = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
 

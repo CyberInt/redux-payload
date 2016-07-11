@@ -1,8 +1,6 @@
-import { extendReducer } from 'redux-reuse';
+import { extendReducer, nullReducer } from 'redux-reuse';
 
 const identity = (value) => value;
-
-const nullReducer = (state) => typeof state === 'undefined' ? null : state;
 
 /**
  * Creates a reducer wrapper which return the payload of the action for the
