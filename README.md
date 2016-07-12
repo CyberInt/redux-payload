@@ -17,7 +17,7 @@ import payload from 'redux-payload';
 var payload = require('redux-payload');
 ```
 
-Or import ES2015 modules
+#### If you need ES6 module
 ```javascript
 import payload from 'redux-payload/es6';
 ```
